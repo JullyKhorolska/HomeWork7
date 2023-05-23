@@ -4,11 +4,17 @@ import shape.Shape;
 
 public class Circle extends Shape {
     String name = "Circle";
+    int x1;
+    int y1;
+    int x2;
+    int y2;
+    public Circle( int x1, int y1, int x2, int y2){
+        this.x1 = x1;
+        this.x2 = x2;
+        this.y1 = y1;
+        this.y2 = y2;
+    }
 
-    int x1 = 0;
-    int y1 = 0;
-    int x2 = 2;
-    int y2 = 2;
     @Override
      public void calculateArea(){
 
@@ -32,14 +38,12 @@ public class Circle extends Shape {
             return true;
         if(obj == null || this.getClass() != obj.getClass())
             return false;
-        Rectangle other = (Rectangle) obj;
+        Circle other = (Circle) obj;
         if(this.x1 != other.x1)
             return false;
         if(this.x2 != other.x2)
             return false;
         if(this.y1 != other.y1)
-            return false;
-        if(this.name.equals(other.name))
             return false;
         return this.y2 == other.y2;
     }

@@ -30,7 +30,7 @@ public class CalculatorProgram extends CalculatorSimple {
                 }
             }
 
-        char arrayBit[] = bit.toCharArray();
+        char[] arrayBit = bit.toCharArray();
 
         i = 0;
         while(i < ((arrayBit.length-1) / 2)){
