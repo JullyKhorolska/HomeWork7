@@ -1,11 +1,10 @@
 package figures;
 import shape.Shape;
 public class Rectangle extends Shape {
-    private final String name;
+    private String name;
     int x1, y1, x2, y2, x3, y3, x4, y4;
-//    public Rectangle(String name){
-//        this.name = name;
-//    }
+    double areaOfRectangle;
+    double perimeterOfRectangle;
 
     public Rectangle(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, String name){
         this.x1 =x1;
@@ -18,21 +17,20 @@ public class Rectangle extends Shape {
         this.y4 =y4;
         this.name = name;
     }
+    protected double calculateSide(int x1, int y1, int x2, int y2){
+        return Math.abs(Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2)));
+    }
 
     @Override
     public void calculateArea(){
         super.calculateArea();
-        double side1 = Math.sqrt(Math.pow((x3 - x2), 2) + Math.pow((y3 - y2), 2));
-        double side2 = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
-        double areaOfRectangle = Math.abs(side1) * Math.abs(side2);
+        areaOfRectangle = calculateSide(x3, y3, x2, y2) * calculateSide(x2, y2, x1, y1);
         System.out.println("Area of " + this.name + " is " + areaOfRectangle);
     }
     @Override
     public void calculatePerimeter(){
         super.calculatePerimeter();
-        double side1 = Math.sqrt(Math.pow((x3 - x2), 2) + Math.pow((y3 - y2), 2));
-        double side2 = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
-        double perimeterOfRectangle = 2 * Math.abs(side1) + 2 * Math.abs(side2);
+        perimeterOfRectangle = 2 * (calculateSide(x3, y3, x2, y2) + calculateSide(x2, y2, x1, y1));
         System.out.println("Perimeter of " + this.name + " is " + perimeterOfRectangle);
     }
     @Override

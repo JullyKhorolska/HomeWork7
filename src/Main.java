@@ -9,14 +9,14 @@ public class Main {
         Shape myTriangle1 = new Triangle(1, -1, 7, 2, 5, 6);
 
 
-        Shape myCircle = new Circle(0,0,2,2);
-        Shape myCircle1 = new Circle(0,0,2,4);
-        Shape myCircle2 = new Circle(0,0,2,2);
+        Shape myCircle = new Circle(4,-1,0,2);
+        Shape myCircle1 = new Circle(5,1,4,-2);
+        Shape myCircle2 = new Circle(4,-1,0,-2);
 
 
-        Shape myRectangle = new Rectangle(1, 7, -3, 3, 5, 4, 5, 1, "FirstRectangle");
-        Shape myRectangle1 = new Rectangle(1, 7, -3, 3, 5, 4, 5, 1, "FirstRectangle");
-        Shape myRectangle2 = new Rectangle(1, 7, -3, 3, 5, 4, 5, 1, "ThirdRectangle");
+        Shape myRectangle = new Rectangle(1, -7, -3, 3, 5, 4, 5, 1, "FirstRectangle");
+        Shape myRectangle1 = new Rectangle(1, -7, -3, 3, 5, 4, 5, 1, "FirstRectangle");
+        Shape myRectangle2 = new Rectangle(1, -7, -3, 3, 5, 4, 5, 1, "ThirdRectangle");
 
 
 
@@ -48,7 +48,7 @@ public class Main {
         System.out.println("Equals for Rectangle and Circle: " + myRectangle.equals(myCircle) + "\n");
 
         System.out.println("Equals for Circle with different coordinates: " + myCircle.equals(myCircle1));
-        System.out.println("Equals for Circle with the same coordinates: " + myCircle.equals(myCircle2));
+        System.out.println("Equals for Circle with the same radius: " + myCircle.equals(myCircle2));
         System.out.println("Equals for Circle and Triangle: " + myCircle.equals(myTriangle) + "\n");
         System.out.println("--------------------------------------------");
 

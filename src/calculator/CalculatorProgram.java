@@ -5,7 +5,7 @@ public class CalculatorProgram extends CalculatorSimple {
     public CalculatorProgram(){
 
     }
-    public void hexToBit(int numberHex) {
+    public static void hexToBit(int numberHex) {
 
         int printNumberHex = numberHex;
 
